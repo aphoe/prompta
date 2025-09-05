@@ -27,28 +27,28 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="kortexDropdown">
                 <li>
-                  <a class="dropdown-item" href="resource">Resource</a>
+                  <a class="dropdown-item" href="resource.php">Resource</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="whitepaper">Whitepaper</a>
+                  <a class="dropdown-item" href="whitepaper.php">Whitepaper</a>
                 </li>
-                <li><a class="dropdown-item" href="tools">Tools</a></li>
+                <li><a class="dropdown-item" href="tools.php">Tools</a></li>
                 <li>
-                  <a class="dropdown-item" href="courses">Courses</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="tutorials">Tutorials</a>
+                  <a class="dropdown-item" href="courses.php">Courses</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="certification"
+                  <a class="dropdown-item" href="tutorials.php">Tutorials</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="certification.php"
                     >Certification</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="bookmark">Bookmark</a>
+                  <a class="dropdown-item" href="bookmark.php">Bookmark</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="notes">Notes</a>
+                  <a class="dropdown-item" href="notes.php">Notes</a>
                 </li>
               </ul>
             </li>
@@ -65,13 +65,13 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="ideaForgeDropdown">
                 <li>
-                  <a class="dropdown-item" href="idea">Idea</a>
+                  <a class="dropdown-item" href="idea.php">Idea</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="feature">Feature</a>
+                  <a class="dropdown-item" href="feature.php">Feature</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="knowledge">Knowledge</a>
+                  <a class="dropdown-item" href="knowledge.php">Knowledge</a>
                 </li>
               </ul>
             </li>
