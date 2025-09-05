@@ -86,7 +86,7 @@ $jsonld_desc = "Generate intelligent prompts for online courses and educational 
 4. What is the estimated duration in days
 5. Is there a launch date? If yes, what date is it?
 6. Does this course come with a certificate?
-7. What are the top three tags for this tool?`;
+7. What are the top three tags for this course?`;
 
           document.getElementById("promptText").textContent = prompt;
           document.getElementById("output").style.display = "block";

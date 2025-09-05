@@ -82,7 +82,7 @@ $jsonld_desc = "Generate intelligent prompts for video tutorials and step-by-ste
           const prompt = `Please give me the following information about ${title}${reference} solely from the transcript below
 1. What is the title?
 2. What is the URL?
-3. What are the top three tags for this tool?
+3. What are the top three tags for this tutorial?
 4. Give me detailed notes of the tutorial. Act as an attentive student who writes very quickly, taking detailed lecture notes.
 5. Give me detailed, actionable steps from the tutorial. This should be a numbered list. This should be based only on the transcript. Don't miss any step. Don't hallucinate.
 6. Give me a bullet list of todos from the transcript`;
