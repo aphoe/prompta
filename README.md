@@ -33,23 +33,31 @@ Prompta is a collection of specialized AI prompt generators designed to help dev
 
 ## 🛠️ Installation
 
-### Option 1: Direct Usage
+### Option 1: Direct Usage with PHP Server
 
-Simply open any of the HTML files in your web browser:
+Set up a PHP server to serve the files:
 
-- `index.html` - Main landing page
-- `resource.html` - Resource prompt generator
-- `tools.html` - Tools prompt generator
-- `courses.html` - Courses prompt generator
-- `tutorials.html` - Tutorials prompt generator
-- `certification.html` - Certification prompt generator
-- `bookmark.html` - Bookmark prompt generator
-- `notes.html` - Notes prompt generator
+- `index.php` - Main landing page
+- `resource.php` - Resource prompt generator
+- `tools.php` - Tools prompt generator
+- `courses.php` - Courses prompt generator
+- `tutorials.php` - Tutorials prompt generator
+- `certification.php` - Certification prompt generator
+- `bookmark.php` - Bookmark prompt generator
+- `notes.php` - Notes prompt generator
+- `idea.php` - Idea prompt generator
+- `feature.php` - Feature prompt generator
+- `knowledge.php` - Knowledge prompt generator
+
+The `.htaccess` file enables clean URLs (e.g., /tools instead of /tools.php).
 
 ### Option 2: Local Development Server
 
 ```bash
-# Using Python (if available)
+# Using PHP built-in server
+php -S localhost:8000
+
+# Or using Python (if PHP not available)
 python -m http.server 8000
 
 # Using Node.js (if available)
@@ -115,11 +123,12 @@ This codebase represents the frontend implementation of the Prompta web applicat
 
 ## 🛠️ Technologies Used
 
-- **Frontend Framework**: HTML5, CSS3, JavaScript (ES6+)
+- **Frontend Framework**: HTML5, CSS3, JavaScript (ES6+), PHP
 - **CSS Framework**: Bootstrap 5.3.0
 - **Icons**: Bootstrap Icons 1.10.0
 - **Schema Markup**: JSON-LD (Schema.org)
 - **Accessibility**: WCAG 2.1 AA compliant
+- **URL Rewriting**: Apache .htaccess for clean URLs
 
 ## 📞 Support
 
