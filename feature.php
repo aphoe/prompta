@@ -122,7 +122,9 @@ Problem to be solved: ${problem}
 
 You will provide the following information based on the idea.
 1. Title of the feature
-2. Description of the feature`;
+2. Description of the feature
+
+No fluff. Be as concise as possible, without affecting the details being provided.`;
 
           document.getElementById("promptText").textContent = prompt;
           document.getElementById("output").style.display = "block";

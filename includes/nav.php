@@ -70,6 +70,9 @@
                 <li>
                   <a class="dropdown-item" href="feature">Feature</a>
                 </li>
+                <li>
+                  <a class="dropdown-item" href="knowledge">Knowledge</a>
+                </li>
               </ul>
             </li>
           </ul>

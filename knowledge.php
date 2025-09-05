@@ -1,9 +1,9 @@
 <?php
-$title = "Idea Forge";
-$description = "Generate intelligent prompts for new product ideas. Free AI prompt generator for idea analysis.";
-$keywords = "AI prompts, idea generator, product ideas, startup ideas, prompt generator";
-$jsonld_name = "Idea Forge Prompt Generator";
-$jsonld_desc = "Generate intelligent prompts for new product ideas.";
+$title = "Knowledge Forge";
+$description = "Generate intelligent prompts for required knowledge and expertise. Free AI prompt generator for knowledge analysis.";
+$keywords = "AI prompts, knowledge generator, expertise, product knowledge, prompt generator";
+$jsonld_name = "Knowledge Forge Prompt Generator";
+$jsonld_desc = "Generate intelligent prompts for required knowledge and expertise.";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,12 +16,24 @@ $jsonld_desc = "Generate intelligent prompts for new product ideas.";
           <div class="card">
             <div class="card-body">
               <h1 class="card-title text-center mb-4">
-                Idea Forge Prompt Generator
+                Knowledge Forge Prompt Generator
               </h1>
-              <form id="ideaForm">
+              <form id="knowledgeForm">
+                <div class="mb-3">
+                  <label for="knowledge" class="form-label">
+                    Knowledge description <span class="required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="knowledge"
+                    name="knowledge"
+                    required
+                  />
+                </div>
                 <div class="mb-3">
                   <label for="title" class="form-label">
-                    Title <span class="required">*</span>
+                    Product title <span class="required">*</span>
                   </label>
                   <input
                     type="text"
@@ -32,12 +44,27 @@ $jsonld_desc = "Generate intelligent prompts for new product ideas.";
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="details" class="form-label">Details (optional)</label>
+                  <label for="description" class="form-label">
+                    Product description <span class="required">*</span>
+                  </label>
                   <textarea
                     class="form-control"
-                    id="details"
-                    name="details"
+                    id="description"
+                    name="description"
                     rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="problem" class="form-label">
+                    Problem product aims to solve <span class="required">*</span>
+                  </label>
+                  <textarea
+                    class="form-control"
+                    id="problem"
+                    name="problem"
+                    rows="4"
+                    required
                   ></textarea>
                 </div>
                 <div class="d-flex flex-column flex-md-row gap-2">
@@ -71,45 +98,32 @@ $jsonld_desc = "Generate intelligent prompts for new product ideas.";
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       document
-        .getElementById("ideaForm")
+        .getElementById("knowledgeForm")
         .addEventListener("submit", function (e) {
           e.preventDefault();
 
+          const knowledge = document.getElementById("knowledge").value.trim();
           const title = document.getElementById("title").value.trim();
-          const details = document.getElementById("details").value.trim();
+          const description = document.getElementById("description").value.trim();
+          const problem = document.getElementById("problem").value.trim();
 
-          if (!title) {
-            alert("Title is required");
+          if (!knowledge || !title || !description || !problem) {
+            alert("All fields are required");
             return;
           }
 
-          const description = details ? `Description: ${details}` : "";
           const prompt = `You are a senior product manager with twenty years of experience. You have worked in senior roles in three of the FAANG companies. You are well sought out. In the last five years, you have consulted for twelve Fortune 500 companies. You are the proud product manager for three unicorns, guiding them from ideation to becoming a unicorn. Your track record includes the fact that every product you have been involved in makes at least USD$10million in annual return rate within its first five years.
-Here is an idea I want to build:
-Idea: ${title}
-${description}
+
+I want to add a required knowledge or expertise to a product. The details are below.
+
+Knowledge description: ${knowledge}
+Product title: ${title}
+Description: ${description}
+Problem to be solved: ${problem}
+
 You will provide the following information based on the idea.
-1. Product title
-2. Exact category such as saas, e-commerce, etc
-3. Suggest a domain name
-4. Suggest a brand name
-5. Please give me a detailed description of the product
-6. Describe the problems it aims to solve. This should be a bulleted list with each problem in bold, followed by a semi-colon and then a sentence-long explanation of the problem.
-7. Write notes on the product. List as must details as possible.
-8. Score the idea on a scale of 1-10 on the following criteria, with one being extremely poor and 10 being excellent.
-a. Strategic Fit
-b. Market Need/Value
-c. Feasibility (Effort)
-d. Monetization Potential
-e. Excitement/Motivation
-f. Uniqueness
-g. Innovation
-h. Target Audience Reach
-i. Learning Potential
-j. Operational Overhead
-k. UX/UI Complexity
-9. Please give me an exhaustive list of features. For each feature, provide a title and a detailed description.
-10. What are all the key knowledge/expertise required to build the product? Please give me a title and a description.
+1. Title of the knowledge/expertise
+2. Description of the knowledge/expertise
 
 No fluff. Be as concise as possible, without affecting the details being provided.`;
 
@@ -121,7 +135,7 @@ No fluff. Be as concise as possible, without affecting the details being provide
       document
         .getElementById("clearBtn")
         .addEventListener("click", function () {
-          document.getElementById("ideaForm").reset();
+          document.getElementById("knowledgeForm").reset();
           document.getElementById("output").style.display = "none";
           document.getElementById("promptText").textContent = "";
         });
