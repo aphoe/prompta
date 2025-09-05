@@ -1,104 +1,15 @@
+<?php
+$title = "Whitepaper Prompt Generator";
+$description = "Generate intelligent prompts for whitepapers and research documents. Free AI prompt generator for whitepaper analysis.";
+$keywords = "AI prompts, whitepaper generator, research documents, whitepapers, prompt generator";
+$jsonld_name = "Whitepaper Prompt Generator";
+$jsonld_desc = "Generate intelligent prompts for whitepapers and research documents.";
+?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Generate intelligent prompts for whitepapers and research documents. Free AI prompt generator for whitepaper analysis."
-    />
-    <meta name="author" content="Afolabi 'aphoe' Legunsen" />
-    <meta
-      name="keywords"
-      content="AI prompts, whitepaper generator, research documents, whitepapers, prompt generator"
-    />
-    <title>Whitepaper Prompt Generator</title>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "Whitepaper Prompt Generator",
-        "description": "Generate intelligent prompts for whitepapers and research documents.",
-        "url": "https://aphoe.com",
-        "author": {
-          "@type": "Person",
-          "name": "Afolabi 'aphoe' Legunsen"
-        },
-        "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Web Browser",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
-      }
-    </script>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Prompta</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="kortexDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Kortex
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="kortexDropdown">
-                <li>
-                  <a class="dropdown-item" href="resource.html">Resource</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="whitepaper.html">Whitepaper</a>
-                </li>
-                <li><a class="dropdown-item" href="tools.html">Tools</a></li>
-                <li>
-                  <a class="dropdown-item" href="courses.html">Courses</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="tutorials.html">Tutorials</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="certification.html"
-                    >Certification</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="bookmark.html">Bookmark</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="notes.html">Notes</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<?php include './includes/head.php'; ?>
+<body>
+<?php include './includes/nav.php'; ?>
     <main class="container mt-5">
       <div class="row justify-content-center">
         <div class="col-md-8">

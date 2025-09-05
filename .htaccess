@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Handle root directory - redirect to index.php
+RewriteRule ^$ index.php [L]
+
+# Handle clean URLs - redirect requests without .php extension to the corresponding PHP file
+# This checks if the requested file doesn't exist, but the .php version does exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# Optional: Redirect .php URLs to clean URLs (prevents duplicate content)
+# Uncomment the lines below if you want to force clean URLs
+RewriteCond %{THE_REQUEST} /([^?\s]+)\.php(\?[^\s]*)?\s [NC]
+RewriteRule ^(.+)\.php$ /%1? [R=301,L]
