@@ -67,6 +67,9 @@
                 <li>
                   <a class="dropdown-item" href="idea">Idea</a>
                 </li>
+                <li>
+                  <a class="dropdown-item" href="feature">Feature</a>
+                </li>
               </ul>
             </li>
           </ul>
