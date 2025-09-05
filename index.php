@@ -1,9 +1,9 @@
 <?php
 $title = "Prompta - AI Prompt Generators";
-$description = "Generate intelligent prompts for various resources, tools, courses, tutorials, certifications, bookmarks, and notes using AI. Free prompt generators for developers and learners.";
-$keywords = "AI prompts, prompt generator, resources, tools, courses, tutorials, certifications, bookmarks, notes";
+$description = "Generate intelligent prompts for various resources, tools, courses, tutorials, certifications, bookmarks, notes, ideas, features, and knowledge using AI. Free prompt generators for developers and learners.";
+$keywords = "AI prompts, prompt generator, resources, tools, courses, tutorials, certifications, bookmarks, notes, ideas, features, knowledge";
 $jsonld_name = "Prompta";
-$jsonld_desc = "Generate intelligent prompts for various resources, tools, courses, tutorials, certifications, bookmarks, and notes using AI.";
+$jsonld_desc = "Generate intelligent prompts for various resources, tools, courses, tutorials, certifications, bookmarks, notes, ideas, features, and knowledge using AI.";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,8 +29,8 @@ $jsonld_desc = "Generate intelligent prompts for various resources, tools, cours
               <h1 class="display-4 fw-bold">Welcome to Prompta</h1>
               <p class="lead">
                 Generate intelligent prompts for various resources, tools,
-                courses, tutorials, certifications, bookmarks, and notes using
-                AI.
+                courses, tutorials, certifications, bookmarks, notes, ideas,
+                features, and knowledge using AI.
               </p>
               <a href="#how-it-works" class="btn btn-light btn-lg"
                 >Get Started</a
@@ -77,8 +77,8 @@ $jsonld_desc = "Generate intelligent prompts for various resources, tools, cours
                     2. Enter Details
                   </h3>
                   <p class="card-text">
-                    Provide the name and optional URL of the resource you want
-                    to analyze.
+                    Provide the required details for the type of prompt you
+                    want to generate.
                   </p>
                 </div>
               </div>
