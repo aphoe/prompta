@@ -1,116 +1,39 @@
+<?php
+$title = "Knowledge Forge";
+$description = "Generate intelligent prompts for required knowledge and expertise. Free AI prompt generator for knowledge analysis.";
+$keywords = "AI prompts, knowledge generator, expertise, product knowledge, prompt generator";
+$jsonld_name = "Knowledge Forge Prompt Generator";
+$jsonld_desc = "Generate intelligent prompts for required knowledge and expertise.";
+?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Generate intelligent prompts for whitepapers and research documents. Free AI prompt generator for whitepaper analysis."
-    />
-    <meta name="author" content="Afolabi 'aphoe' Legunsen" />
-    <meta
-      name="keywords"
-      content="AI prompts, whitepaper generator, research documents, whitepapers, prompt generator"
-    />
-    <title>Whitepaper Prompt Generator</title>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "Whitepaper Prompt Generator",
-        "description": "Generate intelligent prompts for whitepapers and research documents.",
-        "url": "https://aphoe.com",
-        "author": {
-          "@type": "Person",
-          "name": "Afolabi 'aphoe' Legunsen"
-        },
-        "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Web Browser",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
-      }
-    </script>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Prompta</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="kortexDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Kortex
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="kortexDropdown">
-                <li>
-                  <a class="dropdown-item" href="resource.html">Resource</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="whitepaper.html">Whitepaper</a>
-                </li>
-                <li><a class="dropdown-item" href="tools.html">Tools</a></li>
-                <li>
-                  <a class="dropdown-item" href="courses.html">Courses</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="tutorials.html">Tutorials</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="certification.html"
-                    >Certification</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="bookmark.html">Bookmark</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="notes.html">Notes</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<?php include './includes/head.php'; ?>
+<body>
+<?php include './includes/nav.php'; ?>
     <main class="container mt-5">
       <div class="row justify-content-center">
         <div class="col-md-8">
           <div class="card">
             <div class="card-body">
               <h1 class="card-title text-center mb-4">
-                Whitepaper Prompt Generator
+                Knowledge Forge Prompt Generator
               </h1>
-              <form id="whitepaperForm">
+              <form id="knowledgeForm">
+                <div class="mb-3">
+                  <label for="knowledge" class="form-label">
+                    Knowledge description <span class="required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="knowledge"
+                    name="knowledge"
+                    required
+                  />
+                </div>
                 <div class="mb-3">
                   <label for="title" class="form-label">
-                    Title <span class="required">*</span>
+                    Product title <span class="required">*</span>
                   </label>
                   <input
                     type="text"
@@ -121,8 +44,28 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="url" class="form-label">URL (optional)</label>
-                  <input type="url" class="form-control" id="url" name="url" />
+                  <label for="description" class="form-label">
+                    Product description <span class="required">*</span>
+                  </label>
+                  <textarea
+                    class="form-control"
+                    id="description"
+                    name="description"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="problem" class="form-label">
+                    Problem product aims to solve <span class="required">*</span>
+                  </label>
+                  <textarea
+                    class="form-control"
+                    id="problem"
+                    name="problem"
+                    rows="4"
+                    required
+                  ></textarea>
                 </div>
                 <div class="d-flex flex-column flex-md-row gap-2">
                   <button type="submit" class="btn btn-primary flex-fill">
@@ -155,23 +98,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       document
-        .getElementById("whitepaperForm")
+        .getElementById("knowledgeForm")
         .addEventListener("submit", function (e) {
           e.preventDefault();
 
+          const knowledge = document.getElementById("knowledge").value.trim();
           const title = document.getElementById("title").value.trim();
-          const url = document.getElementById("url").value.trim();
+          const description = document.getElementById("description").value.trim();
+          const problem = document.getElementById("problem").value.trim();
 
-          if (!title) {
-            alert("Title is required");
+          if (!knowledge || !title || !description || !problem) {
+            alert("All fields are required");
             return;
           }
 
-          const reference = url ? ` (reference: ${url})` : "";
-          const prompt = `Please give me the following about this whitepaper ${title}${reference}
-1. Title of whitepaper
-2. The URL
-3. A detailed description that doesn't include the text of the abstract`;
+          const prompt = `You are a senior product manager with twenty years of experience. You have worked in senior roles in three of the FAANG companies. You are well sought out. In the last five years, you have consulted for twelve Fortune 500 companies. You are the proud product manager for three unicorns, guiding them from ideation to becoming a unicorn. Your track record includes the fact that every product you have been involved in makes at least USD$10million in annual return rate within its first five years.
+
+I want to add a required knowledge or expertise to a product. The details are below.
+
+Knowledge description: ${knowledge}
+Product title: ${title}
+Description: ${description}
+Problem to be solved: ${problem}
+
+You will provide the following information based on the idea.
+1. Title of the knowledge/expertise
+2. Description of the knowledge/expertise
+
+No fluff. Be as concise as possible, without affecting the details being provided.`;
 
           document.getElementById("promptText").textContent = prompt;
           document.getElementById("output").style.display = "block";
@@ -181,7 +135,7 @@
       document
         .getElementById("clearBtn")
         .addEventListener("click", function () {
-          document.getElementById("whitepaperForm").reset();
+          document.getElementById("knowledgeForm").reset();
           document.getElementById("output").style.display = "none";
           document.getElementById("promptText").textContent = "";
         });

@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 [![Contributing](https://img.shields.io/badge/contributing-guide-green.svg)](CONTRIBUTING.md)
 
-Prompta is a collection of specialized AI prompt generators designed to help developers, learners, and researchers create intelligent prompts for various types of content. Whether you're analyzing resources, evaluating tools, documenting courses, or organizing bookmarks, Prompta provides tailored prompt templates to get the most out of AI assistants.
+Prompta is a collection of specialized AI prompt generators designed to help developers, learners, and researchers create intelligent prompts for various types of content. Whether you're analyzing resources, evaluating tools, documenting courses, organizing bookmarks, generating ideas, planning features, or assessing knowledge needs, Prompta provides tailored prompt templates to get the most out of AI assistants.
 
 ## 🚀 Features
 
@@ -16,6 +16,9 @@ Prompta is a collection of specialized AI prompt generators designed to help dev
   - Certification Details
   - Bookmark Organization
   - Notes Processing
+  - Idea Generation
+  - Feature Planning
+  - Knowledge Assessment
 
 - **User-Friendly Interface**: Clean, responsive Bootstrap-based design
 - **Copy-to-Clipboard**: One-click prompt copying functionality
