@@ -83,11 +83,14 @@ $jsonld_desc = "Generate intelligent prompts for new product ideas.";
             return;
           }
 
-          const description = details ? `Description: ${details}` : "";
+          const detailsClean = details.replace(/\r?\n/g, ' ');
+          const description = details ? `Description: "${detailsClean}"` : "";
           const prompt = `You are a senior product manager with twenty years of experience. You have worked in senior roles in three of the FAANG companies. You are well sought out. In the last five years, you have consulted for twelve Fortune 500 companies. You are the proud product manager for three unicorns, guiding them from ideation to becoming a unicorn. Your track record includes the fact that every product you have been involved in makes at least USD$10million in annual return rate within its first five years.
-Here is an idea I want to build:
+
+          Here is an idea I want to build:
 Idea: ${title}
 ${description}
+
 You will provide the following information based on the idea.
 1. Product title
 2. Exact category such as saas, e-commerce, etc
@@ -108,10 +111,11 @@ h. Target Audience Reach
 i. Learning Potential
 j. Operational Overhead
 k. UX/UI Complexity
-9. Please give me an exhaustive list of features. For each feature, provide a title and a detailed description.
-10. What are all the key knowledge/expertise required to build the product? Please give me a title and a description.
+9. Add the reasons given for scoring of the idea to the notes
+10. Please give me an exhaustive list of features. For each feature, provide a title and a detailed three-sentence description without fluff.
+11. What are all the key knowledge/expertise required to build the product? Please give me a title and a description. Ignore common tech knowledge like UI/UX.
 
-No fluff. Be as concise as possible, without affecting the details being provided.`;
+No fluff.`;
 
           document.getElementById("promptText").textContent = prompt;
           document.getElementById("output").style.display = "block";
