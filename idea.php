@@ -83,7 +83,8 @@ $jsonld_desc = "Generate intelligent prompts for new product ideas.";
             return;
           }
 
-          const description = details ? `Description: "${details}"` : "";
+          const detailsClean = details.replace(/\r?\n/g, ' ');
+          const description = details ? `Description: "${detailsClean}"` : "";
           const prompt = `You are a senior product manager with twenty years of experience. You have worked in senior roles in three of the FAANG companies. You are well sought out. In the last five years, you have consulted for twelve Fortune 500 companies. You are the proud product manager for three unicorns, guiding them from ideation to becoming a unicorn. Your track record includes the fact that every product you have been involved in makes at least USD$10million in annual return rate within its first five years.
 
           Here is an idea I want to build:
