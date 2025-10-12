@@ -45,6 +45,9 @@
                   >
                 </li>
                 <li>
+                  <a class="dropdown-item" href="prompt.php">Prompt</a>
+                </li>
+                <li>
                   <a class="dropdown-item" href="bookmark.php">Bookmark</a>
                 </li>
                 <li>
